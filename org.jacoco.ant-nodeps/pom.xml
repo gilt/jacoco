@@ -14,12 +14,12 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.build</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.build</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.build</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.ant-nodeps</artifactId>
+  <artifactId>com.giltgroupe.org.jacoco.ant-nodeps</artifactId>
 
   <name>JaCoCo :: Ant NoDeps</name>
   <description>JaCoCo Ant Tasks</description>
@@ -33,7 +33,7 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.ant</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.ant</artifactId>
     </dependency>
   </dependencies>
 

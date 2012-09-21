@@ -15,12 +15,12 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.build</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.build</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.build</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.tests</artifactId>
+  <artifactId>com.giltgroupe.org.jacoco.tests</artifactId>
   <packaging>pom</packaging>
 
   <name>JaCoCo :: Tests</name>
@@ -41,27 +41,5 @@
 
   <build>
     <sourceDirectory>src</sourceDirectory>
-
-    <plugins>
-      <plugin>
-        <groupId>org.jacoco</groupId>
-        <artifactId>jacoco-maven-plugin</artifactId>
-        <version>${project.version}</version>
-        <configuration>
-          <exclClassLoaders>sun.reflect.DelegatingClassLoader:org.jacoco.core.test.TargetLoader</exclClassLoaders>
-          <sessionId>${project.artifactId}</sessionId>
-          <includes>
-            <include>${jacoco.includes}</include>
-          </includes>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>prepare-agent</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
   </build>
 </project>

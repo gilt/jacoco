@@ -14,13 +14,13 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.build</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.build</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.build</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.ant</artifactId>
-  <packaging>eclipse-plugin</packaging>
+  <artifactId>com.giltgroupe.org.jacoco.ant</artifactId>
+  <packaging>jar</packaging>
 
   <name>JaCoCo :: Ant</name>
   <description>JaCoCo Ant Tasks</description>
@@ -29,15 +29,15 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.core</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.core</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.report</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.report</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.agent</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.agent</artifactId>
     </dependency>
     <dependency>
       <groupId>org.apache.ant</groupId>

@@ -14,13 +14,13 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.build</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.build</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.build</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.core</artifactId>
-  <packaging>eclipse-plugin</packaging>
+  <artifactId>com.giltgroupe.org.jacoco.core</artifactId>
+  <packaging>jar</packaging>
 
   <name>JaCoCo :: Core</name>
   <description>JaCoCo Core</description>

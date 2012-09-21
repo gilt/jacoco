@@ -14,12 +14,12 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.tests</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.tests</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.tests</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.ant.test</artifactId>
+  <artifactId>com.giltgroupe.org.jacoco.ant.test</artifactId>
 
   <name>JaCoCo :: Test :: Ant</name>
 
@@ -30,7 +30,7 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.ant-nodeps</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.ant-nodeps</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>

@@ -14,12 +14,12 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.build</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.build</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.build</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.agent.rt</artifactId>
+  <artifactId>com.giltgroupe.org.jacoco.agent.rt</artifactId>
   <!-- do not set packaging to eclipse-plugin, because otherwise maven-shade-plugin will not work -->
 
   <name>JaCoCo :: Agent RT</name>
@@ -34,7 +34,7 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.core</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.core</artifactId>
     </dependency>
   </dependencies>
 

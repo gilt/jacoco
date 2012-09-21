@@ -14,14 +14,14 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.build</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.build</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.build</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.doc</artifactId>
+  <artifactId>com.giltgroupe.org.jacoco.doc</artifactId>
   <!-- do not set packaging to pom, because otherwise we will receive "Not executing Javadoc as the project is not a Java classpath-capable package" -->
-  <packaging>eclipse-plugin</packaging>
+  <packaging>jar</packaging>
 
   <name>JaCoCo :: Documentation</name>
   <description>JaCoCo Standalone Distribution</description>
@@ -35,33 +35,33 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.core</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.core</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.report</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.report</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.agent</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.agent</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.agent</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.agent</artifactId>
       <version>${project.version}</version>
       <classifier>runtime</classifier>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.ant</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.ant</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.ant-nodeps</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.ant-nodeps</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.examples</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.examples</artifactId>
       <version>${project.version}</version>
       <type>zip</type>
     </dependency>
@@ -192,7 +192,7 @@
         <dependencies>
           <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>org.jacoco.ant</artifactId>
+            <artifactId>com.giltgroupe.org.jacoco.ant</artifactId>
             <version>${project.version}</version>
           </dependency>
           <dependency>
@@ -247,7 +247,7 @@
           </execution>
         </executions>
       </plugin>
-      
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>xml-maven-plugin</artifactId>

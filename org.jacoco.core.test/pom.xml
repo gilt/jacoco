@@ -14,13 +14,13 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.tests</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.tests</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.tests</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.core.test</artifactId>
-  <packaging>eclipse-test-plugin</packaging>
+  <artifactId>com.giltgroupe.org.jacoco.core.test</artifactId>
+  <packaging>jar</packaging>
 
   <name>JaCoCo :: Test :: Core</name>
 
@@ -32,7 +32,7 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>org.jacoco.core</artifactId>
+      <artifactId>com.giltgroupe.org.jacoco.core</artifactId>
     </dependency>
     <dependency>
       <groupId>junit</groupId>

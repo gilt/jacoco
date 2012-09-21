@@ -14,13 +14,13 @@
 
   <parent>
     <groupId>org.jacoco</groupId>
-    <artifactId>org.jacoco.build</artifactId>
+    <artifactId>com.giltgroupe.org.jacoco.build</artifactId>
     <version>0.5.9.201207300726</version>
     <relativePath>../org.jacoco.build</relativePath>
   </parent>
 
-  <artifactId>org.jacoco.agent</artifactId>
-  <packaging>eclipse-plugin</packaging>
+  <artifactId>com.giltgroupe.org.jacoco.agent</artifactId>
+  <packaging>jar</packaging>
 
   <name>JaCoCo :: Agent</name>
   <description>JaCoCo Agent</description>
@@ -42,7 +42,7 @@
               <artifactItems>
                 <artifactItem>
                   <groupId>${project.groupId}</groupId>
-                  <artifactId>org.jacoco.agent.rt</artifactId>
+                  <artifactId>com.giltgroupe.org.jacoco.agent.rt</artifactId>
                   <classifier>all</classifier>
                   <version>${project.version}</version>
                   <destFileName>jacocoagent.jar</destFileName>

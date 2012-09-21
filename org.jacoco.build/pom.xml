@@ -13,7 +13,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.jacoco</groupId>
-  <artifactId>org.jacoco.build</artifactId>
+  <artifactId>com.giltgroupe.org.jacoco.build</artifactId>
   <version>0.5.9.201207300726</version>
   <packaging>pom</packaging>
 
@@ -81,17 +81,6 @@
     <!-- Order is important: org.jacoco.agent.rt embeds into org.jacoco.agent and JaCoCo Agent used during tests -->
     <module>../org.jacoco.core</module>
     <module>../org.jacoco.report</module>
-    <module>../org.jacoco.agent.rt</module>
-    <module>../org.jacoco.agent</module>
-    <module>../org.jacoco.ant</module>
-    <module>../org.jacoco.ant-nodeps</module>
-
-    <module>../jacoco-maven-plugin</module>
-
-    <module>../org.jacoco.tests</module>
-
-    <module>../org.jacoco.examples</module>
-    <module>../org.jacoco.doc</module>
   </modules>
 
   <scm>
@@ -103,17 +92,12 @@
     <system>Trac</system>
     <url>https://sourceforge.net/apps/trac/eclemma/</url>
   </issueManagement>
+
   <distributionManagement>
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>thirdparty</id>
+      <url>https://nexus.gilt.com/nexus/content/repositories/thirdparty</url>
     </repository>
-    <snapshotRepository>
-      <id>sonatype-nexus-snapshots</id>
-      <name>Sonatype Nexus Snapshots</name>
-      <url>${sonatypeOssDistMgmtSnapshotsUrl}</url>
-    </snapshotRepository>
   </distributionManagement>
 
   <properties>
@@ -156,38 +140,38 @@
       <!-- Project dependencies -->
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>org.jacoco.core</artifactId>
+        <artifactId>com.giltgroupe.org.jacoco.core</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>org.jacoco.report</artifactId>
+        <artifactId>com.giltgroupe.org.jacoco.report</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>org.jacoco.agent</artifactId>
+        <artifactId>com.giltgroupe.org.jacoco.agent</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>org.jacoco.agent</artifactId>
+        <artifactId>com.giltgroupe.org.jacoco.agent</artifactId>
         <classifier>runtime</classifier>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>org.jacoco.agent.rt</artifactId>
+        <artifactId>com.giltgroupe.org.jacoco.agent.rt</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>org.jacoco.ant</artifactId>
+        <artifactId>com.giltgroupe.org.jacoco.ant</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>org.jacoco.ant-nodeps</artifactId>
+        <artifactId>com.giltgroupe.org.jacoco.ant-nodeps</artifactId>
         <version>${project.version}</version>
       </dependency>
       <!-- Third-party dependencies -->
@@ -324,7 +308,7 @@
           <configuration>
             <tagBase>https://eclemma.svn.sourceforge.net/svnroot/eclemma/jacoco/tags</tagBase>
             <autoVersionSubmodules>true</autoVersionSubmodules>
-            <mavenExecutorId>forked-path</mavenExecutorId> 
+            <mavenExecutorId>forked-path</mavenExecutorId>
             <useReleaseProfile>false</useReleaseProfile>
             <!--
             Allows to activate release profile during release.
@@ -364,36 +348,6 @@
           <version>1.0</version>
         </plugin>
         <!-- Tycho plugins -->
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-maven-plugin</artifactId>
-          <version>${tycho.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>target-platform-configuration</artifactId>
-          <version>${tycho.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-packaging-plugin</artifactId>
-          <version>${tycho.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-source-plugin</artifactId>
-          <version>${tycho.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-compiler-plugin</artifactId>
-          <version>${tycho.version}</version>
-        </plugin>
-        <plugin>
-          <groupId>org.eclipse.tycho</groupId>
-          <artifactId>tycho-surefire-plugin</artifactId>
-          <version>${tycho.version}</version>
-        </plugin>
         <!-- Mojo plugins -->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -420,34 +374,6 @@
     </pluginManagement>
 
     <plugins>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-maven-plugin</artifactId>
-        <extensions>true</extensions>
-      </plugin>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>target-platform-configuration</artifactId>
-        <configuration>
-          <resolver>p2</resolver>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-compiler-plugin</artifactId>
-        <configuration>
-          <excludeResources>
-            <excludeResource>**/*.properties</excludeResource>
-          </excludeResources>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.eclipse.tycho</groupId>
-        <artifactId>tycho-surefire-plugin</artifactId>
-        <configuration>
-          <skipExec>${skipTests}</skipExec>
-        </configuration>
-      </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -881,19 +807,6 @@
                         <versionRange>[0.13.0,)</versionRange>
                         <goals>
                           <goal>validate-id</goal>
-                        </goals>
-                      </pluginExecutionFilter>
-                      <action>
-                        <ignore></ignore>
-                      </action>
-                    </pluginExecution>
-                    <pluginExecution>
-                      <pluginExecutionFilter>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <versionRange>[0.5.3,)</versionRange>
-                        <goals>
-                          <goal>prepare-agent</goal>
                         </goals>
                       </pluginExecutionFilter>
                       <action>
